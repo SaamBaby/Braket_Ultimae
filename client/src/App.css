@@ -1,0 +1,148 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Quattrocento);
+/* ==========================================================================
+   Responsive images and box padding
+   ========================================================================== */
+
+
+object {
+  display: block;
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-kit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Goudy Old Style', Arial, sans-serif;
+  font-size: 1.3rem;
+  background: #fefefe;
+}
+
+.container {
+  width: 80%;
+  margin: 60px auto;
+}
+h1 {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.snip1376 {
+  font-family: 'Quattrocento', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  
+  width: 100%;
+  color: #141414;
+  text-align: left;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+.snip1376 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip1376 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.snip1376 figcaption {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 15px 25px 65px;
+  position: relative;
+}
+.snip1376 figcaption:before {
+  position: absolute;
+  content: '';
+  z-index: 2;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: -webkit-linear-gradient(top, transparent 0%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+}
+.snip1376 h2,
+.snip1376 p {
+  margin: 10px 10px 10px;
+}
+.snip1376 h2 {
+  
+  font-weight: 300;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  font-family: 'Oswald', Arial, sans-serif;
+ 
+}
+
+
+body.has-overlay::after {
+  content: "";
+  display: block;
+  position: fixed;
+  padding: 100px 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(black, 0.5);
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 12px 35px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  border: 5px solid black;
+  margin-left: -1px;
+  margin-top: 5%;
+  font-size: 8pt;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-family: Geogia;
+  
+}
+.hero-text button:hover {
+  background-color: transparent;
+  color: white;
+  border: 5px solid black;
+  text-shadow: 2px 2px #000;
+}
+
+.Head {
+  text-align: center;
+  position: relative;
+  font-size: 28pt;
+  letter-spacing: 5px;
+  font-weight: bold;
+  font-family:  Georgia;
+  color: rgb(63, 58, 58);
+}
+

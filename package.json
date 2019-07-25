@@ -1,0 +1,25 @@
+{
+  "name": "bracket_ultimae",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.6",
+    "react-bootstrap": "^1.0.0-beta.9",
+    "react-responsive-navbar": "^1.0.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
