@@ -45,7 +45,7 @@ h1 {
   position: relative;
   overflow: hidden;
   margin: 0px;
-  
+
   width: 100%;
   color: #141414;
   text-align: left;
@@ -139,10 +139,45 @@ body.has-overlay::after {
 .Head {
   text-align: center;
   position: relative;
-  font-size: 28pt;
+ padding-top: 79px;
+  font-size: 38px;
   letter-spacing: 5px;
   font-weight: bold;
-  font-family:  Georgia;
+  font-family:  Candara Light;
   color: rgb(63, 58, 58);
 }
 
+
+.hero-image {
+  
+  height: 50%;
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero{
+  font-family: 'Quattrocento', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+ height: 350px;
+  color: #141414;
+  text-align: left;
+  line-height: 1.4em;
+  font-size: 16px;
+}
+.hero * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.hero img {
+  max-width: 100%;
+ 
+  vertical-align: top;
+}
+.form-group{
+  
+}

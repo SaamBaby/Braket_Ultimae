@@ -1,0 +1,44 @@
+const express= require('express')
+const router= express.Router(); // creates a router
+var tournaments = require('./controllers/Tournament');
+
+// const requireAuth = (req, res, next) => {
+//   if (req.isAuthenticated()) return next();
+
+//   return res.redirect('/login');
+// };
+// router.post('*', requireAuth); // Protect ALL POST routes
+
+
+
+
+
+// Handle create form (POST)
+router.post('/tournament/create', tournaments.createNewTournament);
+
+// // List all Projects (GET)
+// router.get('/projects', projects.findAllProjects);
+// // List a specific Project (GET)
+// router.get('/projects/:id', projects.findProjectById('projects/details'));
+
+// // Require auth on every route below this router
+// router.use(requireAuth);
+
+
+// // Render edit form (GET)
+// router.get('/projects/:id/edit', projects.findProjectById('projects/edit'));
+
+// // Handle edit form (POST)
+// router.post('/projects/:id/edit', projects.updateProjectById);
+// // Delete a Project (GET)
+// router.get('/projects/:id/delete', projects.deleteProjectById);
+
+// module.exports = router;
+
+
+;
+  // Render create form (GET)
+// Project new project from un authed users
+
+
+module.exports= router;

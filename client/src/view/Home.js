@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div class="snip1376 ">
+    <div className="snip1376 ">
       
       
     <img src="https://images.wallpaperscraft.com/image/street_fighter_v_fighting_fighter_art_106069_3840x2160.jpg" alt="sample17" />
@@ -13,7 +13,7 @@ export default function Home() {
     <figcaption>
      
       </figcaption>
-      <div class="hero-text">
+      <div className="hero-text">
     <h1 >Tournament Management</h1>
     <p>Join the millions who trust Challonge to manage their tournaments. More than 18,022,443 brackets created around the world.</p>
     <Link to="/tournament">
@@ -23,7 +23,7 @@ export default function Home() {
    </div>
 
 
-      <div class="Head">
+      <div className="Head">
    <h2>ACTIVE TOURNMENTS </h2>
   </div> 
 

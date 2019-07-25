@@ -77,8 +77,8 @@ const Navigation = styled.header`
       margin: 10px 15px;
       float: left;
       justify-content: start;
-      font-size: .7em;
-      font-family: Gabriola, Helvetica, sans-serif;
+      font-size: .5em;
+      font-family: Goudy Old Style\, Helvetica, sans-serif;
     }
     a {
       font-size: 1em;
