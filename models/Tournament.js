@@ -22,57 +22,57 @@ const classSchema = new Schema({
 const TournamentSchema = new Schema({
   bracket_name: {
     type: String,
-    required: true
+   
   },
   bracket_desc: {
     type: String,
-    required: true
+    
   },
 
   bracket_date: {
     type:String,
-    required: true
+    
   },
   bracket_time: {
     type:String,
-    required: true
+    
   },
   bracket_host: {
     type:String,
-    required: true
+    
   },
   bracket_player1: {
     type:String,
-    required: true
+    
   },
   
   bracket_player2: {
     type:String,
-    required: true
+    
   },
   bracket_player3: {
     type:String,
-    required: true
+    
   },
   bracket_player4: {
     type:String,
-    required: true
+    
   },
   bracket_player5: {
     type:String,
-    required: true
+    
   },
   bracket_player6: {
     type:String,
-    required: true
+    
   },
   bracket_player7: {
     type:String,
-    required: true
+    
   },
   bracket_player8: {
     type:String,
-    required: true
+    
   },
   class: classSchema
 });

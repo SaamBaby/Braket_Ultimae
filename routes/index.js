@@ -16,8 +16,8 @@ var tournaments = require('./controllers/Tournament');
 // Handle create form (POST)
 router.post('/tournament/create', tournaments.createNewTournament);
 
-// // List all Projects (GET)
-// router.get('/projects', projects.findAllProjects);
+// List all Projects (GET)
+router.get('/tournaments', tournaments.findAllTournamets);
 // // List a specific Project (GET)
 // router.get('/projects/:id', projects.findProjectById('projects/details'));
 

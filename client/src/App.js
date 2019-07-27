@@ -4,7 +4,7 @@ import './App.css';
 import Home from '../src/view/Home';
 
 import Tournament from '../src/view/Tournament';
-import error from '../src/view/error'
+// import error from '../src/view/error'
 import {Route, Switch}  from 'react-router-dom';
 import Create from './components/create';
 import Navbar from './components/Navbar';

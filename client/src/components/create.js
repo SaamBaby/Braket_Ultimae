@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+ import { Link } from 'react-router-dom';
 import axios from 'axios';
 //import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -28,7 +28,6 @@ export default class create extends Component {
             bracket_name: '',
             bracket_date: '',
             bracket_desc: '',
-           
             bracket_host: '',
             bracket_time: '',
             bracket_player1: '',
@@ -130,13 +129,12 @@ export default class create extends Component {
         console.log(`Form submitted:`);
         console.log(`Todo Description: ${this.state.bracket_desc}`);
         console.log(`Todo Responsible: ${this.state.bracket_date}`);
-        console.log(`Todo Priority: ${this.state.bracket_name}`);
+        console.log(`Todo Priority: ${this.state.bracket_host}`);
 
         const newTournament = {
             bracket_name: this.state.bracket_name,
             bracket_desc: this.state.bracket_desc,
             bracket_date: this.state.bracket_date,
-           
             bracket_time: this.state.bracket_time,
             bracket_host: this.state.bracket_host,
             bracket_player1: this.state.bracket_player1,
@@ -156,6 +154,9 @@ export default class create extends Component {
       .then(res => {
         console.log(res);
         console.log(res.data);
+        
+        
+        
       })
       .catch(function(error){
 
@@ -182,6 +183,7 @@ console.log(error);
             
             
         })
+        
     }
     render() {
         return (
@@ -200,7 +202,7 @@ console.log(error);
                                 type="text" 
                                 className="form-control"
                                 value={this.state.bracket_Host}
-                                onChange={this.onChangebracket_Host}
+                                onChange={this.onChangebracket_host}
                                 />
                     </div>
                     <div className="form-group">
@@ -313,10 +315,15 @@ console.log(error);
                     </div>
 
                    
-                   
                     <div className="form-group">
                         <input type="submit" value="Create Tournament" className="btn btn-primary" />
+                        <Link to="/tournament">
+                                 Back
+                     </Link>  
                     </div>
+                    
+                   
+                    
                 </form>
             </div>
         )
