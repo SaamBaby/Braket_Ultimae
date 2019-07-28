@@ -42,7 +42,7 @@ h1 {
 
 .snip1376 {
   font-family: 'Quattrocento', Arial, sans-serif;
-  position: relative;
+ 
   overflow: hidden;
   margin: 0px;
 
@@ -109,7 +109,7 @@ body.has-overlay::after {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #e6990b;
 }
 button {
   border: none;
@@ -253,11 +253,159 @@ button {
 }
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
-  margin-left: 08%;
-  margin-right: 40%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
+.nobull {
+  list-style-type: none;}
+ 
 
+  .bracket {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 0;
+  }
+  
+  .round {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .round .winners > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .round .winners > div.matchups .matchup:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  .round .winners > div.matchups .matchup .participants {
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+  
+  .round .winners > div.matchups .matchup .participants .participant {
+    box-sizing: border-box;
+    color: #858585;
+    border-left: 0.25rem solid #858585;
+    background: white;
+    width: 14rem;
+    height: 3rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .round .winners > div.matchups .matchup .participants .participant.winner {
+    color: #e6990b;
+    border-color: #e6990b;
+  }
+  
+  
+  
+  .round .winners > div.matchups .matchup .participants .participant:not(:last-child) {
+    border-bottom: thin solid #f0f2f2;
+  }
+  
+  .round .winners > div.matchups .matchup .participants .participant span {
+    margin: 0 1.0rem;
+    line-height: 3;
+    font-size: .6rem;
+    font-family: "Roboto Slab";
+  }
+  
+  .round .winners > div.connector.filled .line, .round .winners > div.connector.filled.bottom .merger:after, .round .winners > div.connector.filled.top .merger:before {
+    border-color: #60c645;
+  }
+  
+  .round .winners > div.connector .line, .round .winners > div.connector .merger {
+    box-sizing: border-box;
+    width: 1.5rem;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .round .winners > div.connector .line {
+    border-bottom: thin solid #c0c0c8;
+    height: 4rem;
+  }
+  
+  .round .winners > div.connector .merger {
+    position: relative;
+    height: 8rem;
+  }
+  
+  .round .winners > div.connector .merger:before, .round .winners > div.connector .merger:after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+    border: 0 solid;
+    border-color: #c0c0c8;
+  }
+  
+  .round .winners > div.connector .merger:before {
+    border-right-width: thin;
+    border-top-width: thin;
+  }
+  
+  .round .winners > div.connector .merger:after {
+    border-right-width: thin;
+    border-bottom-width: thin;
+  }
+  
+  .round.quarterfinals .winners:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  
+  .round.quarterfinals .winners .matchups .matchup:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  
+  .round.semifinals .winners .matchups .matchup:not(:last-child) {
+    margin-bottom: 10rem;
+  }
+  
+  .round.semifinals .winners .connector .merger {
+    height: 16rem;
+  }
+  
+  .round.semifinals .winners .connector .line {
+    height: 8rem;
+  }
+  
+  .round.finals .winners .connector .merger {
+    height: 3rem;
+  }
+  
+  .round.finals .winners .connector .line {
+    height: 1.5rem;
+  }
+
+  @media only screen and (max-width: 800px) {
+   
+    .logo {
+      padding-left: 25px !important;
+      padding-top: 0px !important;
+    }
+  }
+  /* @media only screen and (max-width: 600px) {
+    height: auto;
+    min-height: 50px;
+    display: block;
+    position: relative;
+    .logo { */
+
+      .bracket_container {
+        padding: 10%;
+        margin-top: 20%
+      } 
 

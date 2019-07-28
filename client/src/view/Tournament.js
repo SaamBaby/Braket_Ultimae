@@ -3,19 +3,7 @@ import { Link} from "react-router-dom";
 import axios from 'axios';
 
 
-// const Tournament = props => (
-//     <tr>
-//         <td>{props.tournament.bracket_name}</td>
-//         <td>{props.tournament.bracket_date}</td>
-//         <td>{props.tournament.bracket_time}</td>
-        
-// this.setState({tournament: response.data });
-// console.log("Print data")
-// console.log(response.data)
 
-// })
-//     </tr>
-// )
 
 export default class TournmentList extends Component {
 
@@ -42,14 +30,9 @@ export default class TournmentList extends Component {
           
   }
 
-  //  tournamentList() {
-  //   return this.state.tournament.map(function(currenttournament, i){
-  //       return <Tournament tournament={currenttournament} key={i} />;
-        
-  //   })
-//}
+ 
 render() {
-  var {tournaments, isLoaded} =this.state;
+  var {tournaments} =this.state;
   
   return (
     <div>
@@ -71,66 +54,43 @@ render() {
   </div> 
   
    <div className="Head">
-   <h2> Your Tournaments</h2>
+   <h2>  Tournament Dashboard</h2>
    </div> 
 
+   
+      
   
-    {/* <div><ul>
-
-
-    <table className="table table-striped" style={{ marginTop: 20 }} >
-                    <thead>
-                        <tr>
-                            <th>Tournament Name</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {tournaments.map(item => (
+<div class="grid-container"> 
+{tournaments.map(item => (
     
-    <li key ={item.id}>
-      {item.bracket_name} 
-     
-  
-    </li>
-  ))}
-                    </tbody>
-                </table>
-
-    
-    </ul></div> */}
-     {tournaments.map(item => (
-    
-    <li key ={item.id}>
-      {item.bracket_name} 
-     
-  
-    </li>
-  ))}
-
-<div class="grid-container">  
-    <div class="grid-container">
+  <li className ="nobull" key ={item.id}> 
+      
   <figure class="snip1360">
   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample88.jpg" alt="sample88" />
   <figcaption>
-    <h2>Man loses the lotto for the second time</h2>
-    <p>I'm looking for something that can deliver a 50-pound payload of snow on a small feminine target. Can you suggest something? Hello? </p><a href="#" class="read-more">Read More</a>
+    <h2>{item.bracket_name} </h2>
+    <p>{item.bracket_desc} </p>
+    
+   
+    <a href={"/tournament/"+item._id} class="read-more">Go to Bracket</a>
   </figcaption>
 </figure>
-<figure class="snip1360 hover"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample86.jpg" alt="sample86" />
-  <figcaption>
-    <h2>Home sapiens feared extinct</h2>
-    <p>Calvin: I'm a genius, but I'm a misunderstood genius. Hobbes: What's misunderstood about you? Calvin: Nobody thinks I'm a genius.</p><a href="#" class="read-more">Read More</a>
-  </figcaption>
-</figure>
-<figure class="snip1360"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample43.jpg" alt="sample43" />
-  <figcaption>
-    <h2>Mondays cancelled till further notice</h2>
-    <p>If you want to stay dad you've got to polish your image. I think the image we need to create for you is "repentant but learning".</p><a href="#" class="read-more">Read More</a>
-  </figcaption>
-</figure>
+
+</li>
+))}
 </div>
-</div>
+
+
+  
+
+
+
+
+
+
+
+     
+
 </div>
 
  );

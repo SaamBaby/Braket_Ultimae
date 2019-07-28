@@ -14,15 +14,22 @@ const Navigation = styled.header`
   align-items: center;
   padding: 0px 100px 0;
   height: 60px;
-  margin-bottom: 0px;
   color: #fff;
-  background:transparent;
+  //position: fixed;
+  margin-bottom: 0px;
+  
+  // background:transparent;
 
-  .logo a {
-    padding-top:33px;
+  .logo a  {
+     
+    padding-top:35px;
     display: flex;
     flex-direction: column;
     clear: both;
+    color: #e68d20;;
+    font-family: Forte, Helvetica, sans-serif;
+    
+    
     padding-bottom: 30px;
     text-decoration: none;
 
@@ -55,7 +62,7 @@ const Navigation = styled.header`
     opacity: 0.55;
     transition: all 0.6s;
     color: #ccc;
-    font-size: 1em;
+    font-size: .5em;
   }
   a:hover {
     opacity: 1;
@@ -63,7 +70,7 @@ const Navigation = styled.header`
   .fa-bars {
     display: none;
     color: #e68d20;
-    font-size: 1.9rem;
+    font-size: 1.2rem;
   }
   nav {
     ul {
@@ -77,8 +84,8 @@ const Navigation = styled.header`
       margin: 10px 15px;
       float: left;
       justify-content: start;
-      font-size: .5em;
-      font-family: Goudy Old Style\, Helvetica, sans-serif;
+      font-size: .46em;
+      font-family:Quattrocento, Helvetica, sans-serif;
     }
     a {
       font-size: 1em;
@@ -95,7 +102,7 @@ const Navigation = styled.header`
   @media only screen and (max-width: 800px) {
     padding: 0px;
     .logo {
-      padding-left: 15px;
+      padding-left: 25px !important;
       padding-top: 0px !important;
     }
   }
@@ -109,7 +116,10 @@ const Navigation = styled.header`
       display: block;
       padding-top: 20px;
       margin: 0px;
-      margin-left: -25px;
+      color: #e68d20;;
+      font-family: Forte, Helvetica, sans-serif;
+     
+      margin-left: 25px;
       a {
         padding: 20px 0px;
       }
@@ -178,10 +188,12 @@ class Nav extends Component {
     const { isExpanded } = this.state;
 
     return (
-      <Navigation>
+     
+      <Navigation style={{backgroundColor: window.scrollY > 1000 ? "white" : "transparent"}}>
         <div className="logo">
           <Link to="/">
-           <img src={Logo} alt="Logo"/>
+           {/* <img src={Logo} alt="Logo"/> */}
+           BRAKET ULTIMAE
             
           </Link>
         </div>
@@ -193,14 +205,14 @@ class Nav extends Component {
           />
           <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
             <NavLink activeClassName="active" to="/">
-              <li>Home</li>
+              <li>HOME</li>
             </NavLink>
             <NavLink activeClassName="active" to="/tournament">
-              <li>Tournament</li>
+              <li>TOURNMENT</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/tournament">
+            {/* <NavLink activeClassName="active" to="/tournament">
               <li>Login</li>
-            </NavLink>
+            </NavLink> */}
             
           </ul>
         </nav>

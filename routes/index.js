@@ -16,10 +16,11 @@ var tournaments = require('./controllers/Tournament');
 // Handle create form (POST)
 router.post('/tournament/create', tournaments.createNewTournament);
 
-// List all Projects (GET)
+// List all tournaments'(GET)
 router.get('/tournaments', tournaments.findAllTournamets);
-// // List a specific Project (GET)
-// router.get('/projects/:id', projects.findProjectById('projects/details'));
+// // List a specific tournaments' (GET)
+
+router.get('/tournament/:id', tournaments.findTournametById('projects/details'));
 
 // // Require auth on every route below this router
 // router.use(requireAuth);
