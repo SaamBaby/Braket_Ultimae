@@ -7,7 +7,7 @@ const classSchema = new Schema({
  
   bracket_desc:String,
   bracket_host:String,
-  bracket_time:String,
+  bracket_img:String,
   bracket_player1:String,
   bracket_player2:String,
   bracket_player3:String,
@@ -33,7 +33,7 @@ const TournamentSchema = new Schema({
     type:String,
     
   },
-  bracket_time: {
+   bracket_img: {
     type:String,
     
   },

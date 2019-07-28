@@ -66,7 +66,7 @@ render() {
   <li className ="nobull" key ={item.id}> 
       
   <figure class="snip1360">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample88.jpg" alt="sample88" />
+  <img src={item.bracket_img} alt="sample88" />
   <figcaption>
     <h2>{item.bracket_name} </h2>
     <p>{item.bracket_desc} </p>

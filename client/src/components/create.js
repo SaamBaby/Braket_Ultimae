@@ -14,7 +14,7 @@ export default class create extends Component {
             this.onChangebracket_date = this.onChangebracket_date.bind(this);
             this.onChangebracket_desc = this.onChangebracket_desc.bind(this);
             this.onChangebracket_host = this.onChangebracket_host.bind(this);
-            this.onChangebracket_time = this.onChangebracket_time.bind(this);
+            this.onChangebracket_img = this.onChangebracket_img.bind(this);
             this.onChangebracket_player1 = this.onChangebracket_player1.bind(this);
             this.onChangebracket_player2 = this.onChangebracket_player2.bind(this);
             this.onChangebracket_player3 = this.onChangebracket_player3.bind(this);
@@ -29,7 +29,7 @@ export default class create extends Component {
             bracket_date: '',
             bracket_desc: '',
             bracket_host: '',
-            bracket_time: '',
+            bracket_img: '',
             bracket_player1: '',
             bracket_player2: '',
             bracket_player3: '',
@@ -68,9 +68,9 @@ export default class create extends Component {
             
         });
     }
-    onChangebracket_time(e) {
+    onChangebracket_img(e) {
         this.setState({
-            bracket_time: e.target.value
+            bracket_img: e.target.value
             
         });
     }
@@ -135,7 +135,7 @@ export default class create extends Component {
             bracket_name: this.state.bracket_name,
             bracket_desc: this.state.bracket_desc,
             bracket_date: this.state.bracket_date,
-            bracket_time: this.state.bracket_time,
+            bracket_img: this.state.bracket_img,
             bracket_host: this.state.bracket_host,
             bracket_player1: this.state.bracket_player1,
             bracket_player2: this.state.bracket_player2,
@@ -169,7 +169,7 @@ console.log(error);
                 bracket_date: '',
                 bracket_desc: '',
                 bracket_host: '',
-                bracket_time: '',
+                bracket_img: '',
                 bracket_player1: '',
                 bracket_player2: '',
                 bracket_player3: '',
@@ -233,12 +233,12 @@ console.log(error);
                                 />
                     </div>
                     <div className="form-group">
-                        <label>Time</label>
+                        <label>Display Image URL</label>
                         <input 
                                 type="text" 
                                 className="form-control"
-                                value={this.state.bracket_time}
-                                onChange={this.onChangebracket_time}
+                                value={this.state.bracket_img}
+                                onChange={this.onChangebracket_img}
                                 />
                     </div>
                     <div className="form-group">

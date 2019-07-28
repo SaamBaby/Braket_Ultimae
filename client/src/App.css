@@ -295,9 +295,9 @@ button {
   
   .round .winners > div.matchups .matchup .participants .participant {
     box-sizing: border-box;
-    color: #858585;
+    color: #222020;
     border-left: 0.25rem solid #858585;
-    background: white;
+    background: rgb(196, 196, 196);
     width: 14rem;
     height: 3rem;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.12);
@@ -311,7 +311,7 @@ button {
   
   
   .round .winners > div.matchups .matchup .participants .participant:not(:last-child) {
-    border-bottom: thin solid #f0f2f2;
+    border-bottom: thin solid #6d7272;
   }
   
   .round .winners > div.matchups .matchup .participants .participant span {
@@ -322,7 +322,7 @@ button {
   }
   
   .round .winners > div.connector.filled .line, .round .winners > div.connector.filled.bottom .merger:after, .round .winners > div.connector.filled.top .merger:before {
-    border-color: #60c645;
+    border-color: #131413;
   }
   
   .round .winners > div.connector .line, .round .winners > div.connector .merger {
