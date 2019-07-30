@@ -9,7 +9,7 @@ import Tournament from '../src/view/Tournament';
 import {Route, Switch}  from 'react-router-dom';
 import Create from './components/create';
 import Navbar from './components/Navbar';
-import Details from './components/bracket_details';
+import Details from './components/QuaterFinal';
 
 
 

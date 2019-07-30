@@ -7,7 +7,7 @@ exports.createNewTournament = async (req, res) => {
   const body = req.body;
   const tournament = await new Tournament (body).save();
   
-  //  console.log(res.body)
+    console.log(tournament.roun1)
   res.redirect(`/tournaments`); 
   
   
@@ -18,7 +18,7 @@ exports.findAllTournamets= async (req, res) => {
   const tournaments = await Tournament.find();
   res.json(tournaments);
   // res.render('/tournaments', { tournaments });
-  // console.log(tournaments);
+   console.log(tournaments);
 
   //Find all Projects'tournaments/id',
  
@@ -33,5 +33,15 @@ exports.findTournametById = viewPath => async (req, res) => {
   // res.render(viewPath, {tournament});
 };
 
+exports.findAllTournamets= async (req, res) => {
+  const tournaments = await Tournament.find();
+  res.json(tournaments);
+  // res.render('/tournaments', { tournaments });
+   console.log(tournaments);
+
+  //Find all Projects'tournaments/id',
+ 
+ 
+};
 
  

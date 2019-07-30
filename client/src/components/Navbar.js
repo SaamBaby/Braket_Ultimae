@@ -14,7 +14,8 @@ const Navigation = styled.header`
   align-items: center;
   padding: 0px 100px 0;
   height: 60px;
-  color: #fff;
+  color: #ffffff;
+  
   //position: fixed;
   margin-bottom: 0px;
   
