@@ -36,7 +36,7 @@ onChangesemifinal_winner2(e) {
 
 
   componentDidMount() {
-      fetch('http://localhost:5001/tournament/'+this.props.match.params.id/+'quaterfinals/')
+      fetch('http://localhost:5001/tournament/quaterfinal'+this.props.match.params.id)
           .then(res => res.json())
           .then(json => {this.setState({
            tournament:json,
