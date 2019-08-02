@@ -16,11 +16,17 @@ var tournaments = require('./controllers/Tournament');
 // Handle create form (POST)
 router.post('/tournament/create', tournaments.createNewTournament);
 
+// Handle select form (POST)
+router.post('/tournament/quaterfinal', tournaments.selectquaterfinal);
+
 // List all tournaments'(GET)
 router.get('/tournaments', tournaments.findAllTournamets);
+
 // // List a specific tournaments' (GET)
 
-router.get('/tournament/:id', tournaments.findTournametById('projects/details'));
+router.get('/tournament/:id', tournaments.findTournametById);
+
+// find all quater final winners
 
 // // Require auth on every route below this router
 // router.use(requireAuth);

@@ -9,7 +9,8 @@ import Tournament from '../src/view/Tournament';
 import {Route, Switch}  from 'react-router-dom';
 import Create from './components/create';
 import Navbar from './components/Navbar';
-import Details from './components/QuaterFinal';
+import Details from './components/bracketgame';
+import Semifinals from './components/semifinals';
 
 
 
@@ -26,6 +27,7 @@ function App() {
    <Route exact  path="/tournament" component={Tournament}/>
    <Route exact  path="/tournament/:id" component={Details}/>
    <Route exact  path="/create-tournament" component={Create}/>
+   <Route exact  path="/tournament/:id/semifinals" component={ Semifinals }/>
    
    </Switch>
    

@@ -1,4 +1,5 @@
 const Tournament = require('../../models/Tournament');
+const Quaterfinal = require('../../models/quaterfinal');
 
 // Projects CRUD
 // Creating
@@ -7,41 +8,58 @@ exports.createNewTournament = async (req, res) => {
   const body = req.body;
   const tournament = await new Tournament (body).save();
   
-    console.log(tournament.roun1)
+    
   res.redirect(`/tournaments`); 
   
   
 };
 
-//Find all Projects'tournaments/list', {
+exports.selectquaterfinal = async (req, res) => {
+  const body = req.body;
+  const quaterfinal = await new Quaterfinal  (body).save();
+  
+    console.log(quaterfinal)
+  
+  
+  
+};
+
+
+
+//Find all findAllquaterfinals
+  exports.findAllquaterfinals= async (req, res) => {
+    const quaterfinals = await Quaterfinal.find();
+    res.json(quaterfinals);
+    
+     console.log(quaterfinals);
+  
+   
+   
+   
+  };
+
+
 exports.findAllTournamets= async (req, res) => {
   const tournaments = await Tournament.find();
   res.json(tournaments);
   // res.render('/tournaments', { tournaments });
    console.log(tournaments);
 
-  //Find all Projects'tournaments/id',
+ 
  
  
 };
-exports.findTournametById = viewPath => async (req, res) => {
+exports.findTournametById = async (req, res) => {
   const id = req.params.id;
   const tournament = await  Tournament.findById(id);
-  console.log(tournament);
-  console.log(id);
-  res.json(tournament);
-  // res.render(viewPath, {tournament});
+ // console.log(tournament);
+ 
+ res.json(tournament);
+  
 };
 
-exports.findAllTournamets= async (req, res) => {
-  const tournaments = await Tournament.find();
-  res.json(tournaments);
-  // res.render('/tournaments', { tournaments });
-   console.log(tournaments);
 
-  //Find all Projects'tournaments/id',
- 
- 
-};
+
+
 
  
