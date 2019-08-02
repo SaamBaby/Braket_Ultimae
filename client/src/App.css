@@ -531,7 +531,6 @@ button {
     list-style-type: none;
 }
 
-<<<<<<< HEAD
 .bracket {
     display: inline-block;
     position: relative;
@@ -680,7 +679,6 @@ button {
     padding: 10%;
     margin-top: 20%
 }
-=======
 
   @media only screen and (max-width: 800px) {
 
@@ -1178,4 +1176,3 @@ h2 {
   color: #CD7F32;
 }
 
->>>>>>> 71ace6eb0aa89762bf0eda70b928c40484747fc1
