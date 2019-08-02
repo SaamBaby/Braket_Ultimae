@@ -9,11 +9,15 @@ import Tournament from '../src/view/Tournament';
 import {Route, Switch}  from 'react-router-dom';
 import Create from './components/create';
 import Navbar from './components/Navbar';
+<<<<<<< HEAD
 import Footer from './components/Footer';
 import Details from './components/bracket_details';
 import Login from './components/Login';
 import Register from './components/Register'
 import { rootCertificates } from 'tls';
+=======
+import Details from './components/QuaterFinal';
+>>>>>>> 71ace6eb0aa89762bf0eda70b928c40484747fc1
 
 
 

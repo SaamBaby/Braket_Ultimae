@@ -16,6 +16,17 @@ const classSchema = new Schema({
   bracket_player6:String,
   bracket_player9:String,
   bracket_player8:String,
+  round1: [	
+    {
+       winner1:String,
+       winner2:String,
+       winner3:String,
+       winner4:String
+
+    },
+ 
+ ]
+
 
 });
 
@@ -30,7 +41,10 @@ const TournamentSchema = new Schema({
   },
 
   bracket_date: {
-    type:String,
+   
+      type: Date,
+      default: Date.now
+  
     
   },
    bracket_img: {
@@ -74,6 +88,16 @@ const TournamentSchema = new Schema({
     type:String,
     
   },
+  round1: [	
+    {
+       winner1:{type: String},
+       winner2:{type: String},
+       winner3: {type: String},
+       winner4:{type: String},
+    },
+ 
+ ]
+,
   class: classSchema
 });
 
