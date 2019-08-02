@@ -11,7 +11,7 @@ import Create from './components/create';
 import Navbar from './components/Navbar';
 import Details from './components/bracketgame';
 import Semifinals from './components/semifinals';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 // import Details from './components/bracket_details';
 import Login from './components/Login';
 import Register from './components/Register'
