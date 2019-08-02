@@ -211,6 +211,9 @@ class Nav extends Component {
             <NavLink activeClassName="active" to="/tournament">
               <li>TOURNMENT</li>
             </NavLink>
+            <NavLink activeClassName="active" to="/Login">
+              <li>Login</li>
+            </NavLink>
             {/* <NavLink activeClassName="active" to="/tournament">
               <li>Login</li>
             </NavLink> */}

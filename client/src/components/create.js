@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
  import { Link } from 'react-router-dom';
 import axios from 'axios';
-// import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 
@@ -188,144 +188,168 @@ console.log(error);
     render() {
         return (
            
-            <div style={{marginTop: 10}}>
-               <div className="Head">
-   <h2>NEW TOURNMENT </h2>
-
-  </div> 
+            <div >
+   <div className="Head">
+      <h2>NEW TOURNMENT </h2>
+   </div>
+   <div className="pop">
+      <form onSubmit={this.onSubmit} className ="form-style-7">
+          
+         <div className="form-group" className="line-up">
+         
   
-                <form onSubmit={this.onSubmit}>
+         
+            <label>
+            <input 
+                placeholder = "Host"
 
-                <div className="form-group">
-                        <label>Host</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_Host}
-                                onChange={this.onChangebracket_host}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Tournament name</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_name}
-                                onChange={this.onChangebracket_name}
-                                />
-                    </div>
-                    <div className="form-group"> 
-                        <label>Description: </label>
-                        <input  type="text"
-                                className="form-control"
-                                value={this.state.bracket_desc}
-                                onChange={this.onChangebracket_desc}
-                                />
-                     
-                    </div>
-                    <div className="form-group">
-                        <label>Date</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_date}
-                                onChange={this.onChangebracket_date}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Display Image URL</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_img}
-                                onChange={this.onChangebracket_img}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Player 1</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_player1}
-                                onChange={this.onChangebracket_player1}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Player 2</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_player2}
-                                onChange={this.onChangebracket_player2}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Player 3</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_player3}
-                                onChange={this.onChangebracket_player3}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Player 4</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_player4}
-                                onChange={this.onChangebracket_player4}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Player 5</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_player5}
-                                onChange={this.onChangebracket_player5}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Player 6</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_player6}
-                                onChange={this.onChangebracket_player6}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Player 7</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_player7}
-                                onChange={this.onChangebracket_player7}
-                                />
-                    </div>
-                    <div className="form-group">
-                        <label>Player 8</label>
-                        <input 
-                                type="text" 
-                                className="form-control"
-                                value={this.state.bracket_player8}
-                                onChange={this.onChangebracket_player8}
-                                />
-                    </div>
-
-                   
-                    <div className="form-group">
-                        <input type="submit" value="Create Tournament" className="btn btn-primary" />
-                        <Link to="/tournament">
-                                 Back
-                     </Link>  
-                    </div>
-                    
-                   
-                    
-                </form>
-            </div>
+               type="text" 
+               value={this.state.bracket_Host}
+               onChange={this.onChangebracket_host}
+               />
+            </label>
+         </div>
+         <div className="form-group" className="line-up">
+            <label>
+            <input 
+                placeholder = "Your tournament name"
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_name}
+               onChange={this.onChangebracket_name}
+               />
+            </label>
+         </div>
+         <div className="form-group" className="line-up"> 
+            <label> 
+            <input  type="text"
+                placeholder ="Description"
+               className="form-control"
+               value={this.state.bracket_desc}
+               onChange={this.onChangebracket_desc}
+               />
+            </label>
+         </div>
+         <div className="form-group">
+            <label>
+            <input 
+                placeholder ="Date"
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_date}
+               onChange={this.onChangebracket_date}
+               />
+            </label>
+         </div>
+         <div className="form-group ">
+            <label>
+            <input 
+                placeholder = "url to the placeholder image"
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_img}
+               onChange={this.onChangebracket_img}
+               />
+            </label>
+         </div>
+         <div className="form-group form-group-left">
+            <label>
+            <input 
+                placeholder ="Player 1"
+                type="text" 
+               className="form-control"
+               value={this.state.bracket_player1}
+               onChange={this.onChangebracket_player1}
+               />
+            </label>
+         </div>
+         <div className="form-group form-group-right">
+            <label>
+            <input
+                            placeholder ="Player 2"
+ 
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_player2}
+               onChange={this.onChangebracket_player2}
+               />
+            </label>
+         </div>
+         <div className="form-group form-group-left">
+            <label>
+            <input 
+            placeholder = "Player 3"
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_player3}
+               onChange={this.onChangebracket_player3}
+               />
+            </label>
+         </div>
+         <div className="form-group form-group-right">
+            <label>
+            <input 
+            placeholder ="Player 4"
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_player4}
+               onChange={this.onChangebracket_player4}
+               />
+            </label>
+         </div>
+         <div className="form-group form-group-left">
+            <label>
+            <input 
+            placeholder ="Player 5"
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_player5}
+               onChange={this.onChangebracket_player5}
+               />
+            </label>
+         </div>
+         <div className="form-group form-group-right">
+            <label>
+            <input 
+            placeholder = "Player 6"
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_player6}
+               onChange={this.onChangebracket_player6}
+               />
+            </label>
+         </div>
+         <div className="form-group form-group-left">
+            <label>
+            <input 
+            placeholder = "Player 7"
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_player7}
+               onChange={this.onChangebracket_player7}
+               />
+            </label>
+         </div>
+         <div className="form-group form-group-right">
+            <label>
+            <input 
+            placeholder ="Player 8"
+               type="text" 
+               className="form-control"
+               value={this.state.bracket_player8}
+               onChange={this.onChangebracket_player8}
+               />
+            </label>
+         </div>
+         <div className="form-group">
+            <input type="submit" value="Create Tournament" className="btn btn-primary" />
+            <Link to="/tournament">
+            Back
+            </Link>  
+         </div>
+      </form>
+   </div>
+</div>
         )
     }
 }
