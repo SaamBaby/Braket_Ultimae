@@ -72,25 +72,13 @@ render() {
     <p>{item.bracket_desc} </p>
     
    
-    <a href={"/tournament/"+item._id} class="read-more">Go to Bracket</a>
+    <a href={"/tournament/"+item._id} className="read-more">Go to Bracket</a>
   </figcaption>
 </figure>
 
 </li>
 ))}
 </div>
-
-
-  
-
-
-
-
-
-
-
-     
-
 </div>
 
  );
