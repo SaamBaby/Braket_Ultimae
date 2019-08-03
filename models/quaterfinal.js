@@ -40,8 +40,8 @@ const quaterfinalSchema = new Schema({
   class: classSchema
 });
 
-const   Quaterfinal= mongoose.model('quaterfinal', quaterfinalSchema);
+const  Quaterfinal= mongoose.model('quaterfinal', quaterfinalSchema);
 
-module.exports =  Quaterfinal;
+module.exports = Quaterfinal;
 
 

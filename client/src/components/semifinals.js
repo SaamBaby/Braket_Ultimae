@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Form from './create';
+
 import axios from 'axios';
 import { Link} from "react-router-dom";
 
@@ -7,86 +7,103 @@ import { Link} from "react-router-dom";
 
 
 
-export default class TournmentDetails extends Component {
+export default class semifinals extends Component {
 
   constructor(props) {
       super(props);
-      this.onChangesemifinal_winner1 = this.onChangesemifinal_winner1.bind(this);
-      this.onChangesemifinal_winner2 = this.onChangesemifinal_winner2.bind(this);
-      
-      this.onSubmit = this.onSubmit.bind(this);
+      // this.onChangequaterfinal_winner1 = this.onChangequaterfinal_winner1.bind(this);
+      // this.onChangequaterfinal_winner2 = this.onChangequaterfinal_winner2.bind(this);
+      // this.onChangequaterfinal_winner3 = this.onChangequaterfinal_winner3.bind(this);
+      // this.onChangequaterfinal_winner4= this.onChangequaterfinal_winner4.bind(this);
+      // this.onSubmit = this.onSubmit.bind(this);
       this.state = {
         tournament:[],
-       semifinal_winner1: '',
-       semifinal_winner2: ''
-      
+      //  quaterfinal_winner1: '',
+      //  quaterfinal_winner2: '',
+      //  quaterfinal_winner3: '',
+      //  quaterfinal_winner4: ''
        }
   }
 
-  onChangesemifinal_winner1(e) {
-    this.setState({
-      semifinal_winner1: e.target.value
-    });
-}
-onChangesemifinal_winner2(e) {
-    this.setState({
-      semifinal_winner2: e.target.value
-    });
-}
+//   onChangequaterfinal_winner1(e) {
+//     this.setState({
+//       quaterfinal_winner1: e.target.value
+//     });
+// }
+// onChangequaterfinal_winner2(e) {
+//     this.setState({
+//       quaterfinal_winner2: e.target.value
+//     });
+// }
 
-
-  componentDidMount() {
-      fetch('http://localhost:5001/tournament/quaterfinal'+this.props.match.params.id)
-          .then(res => res.json())
-          .then(json => {this.setState({
-           tournament:json,
+// onChangequaterfinal_winner3(e) {
+//     this.setState({
+//       quaterfinal_winner3: e.target.value
         
-          })})
-        
-          .catch(function (error){
-              console.log(error);
-          })
+//     });
+// }
+// onChangequaterfinal_winner4(e) {
+//   this.setState({
+//     quaterfinal_winner4: e.target.value
+      
+//   });
+// }
 
-          
-  }
-  
-  onSubmit(e) {
-    e.preventDefault();
+
+componentDidMount() {
+  fetch('http://localhost:5001/tournament/quaterfinal/'+this.props.match.params.id)
+  .then(res => res.json())
+  .then(json => {this.setState({
+    tournament:json,
+
+  })})
     
-    console.log(`Form submitted:`);
-    console.log(`Todo Description: ${this.state.semifinal_winner1}`);
-    console.log(`Todo Responsible: ${this.state.semifinal_winner2}`);
-   
+      .catch(function (error){
+          console.log(error);
+      })
 
-    const newsemiFinals = {
-     semifinal_winner1 : this.state.semifinal_winner1,
-     semifinal_winner2 :  this.state.semifinal_winner2,
-     
+      
+}
+  
+//   onSubmit(e) {
+//     e.preventDefault();
+    
+//     console.log(`Form submitted:`);
+//     console.log(`Todo Description: ${this.state.quaterfinal_winner1}`);
+//     console.log(`Todo Responsible: ${this.state.quaterfinal_winner2}`);
+//     console.log(`Todo Priority: ${this.state.quaterfinal_winner3}`);
+
+//     const newQuaterFinals = {
+//      quaterfinal_winner1 : this.state.quaterfinal_winner1,
+//      quaterfinal_winner2 :  this.state.quaterfinal_winner2,
+//      quaterfinal_winner3 :  this.state.quaterfinal_winner3,
+//      quaterfinal_winner4 :  this.state.quaterfinal_winner4,
        
 
        
-    };
-         axios.post('http://localhost:5001/tournament/semifinal',newsemiFinals)
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
+//     };
+//          axios.post('http://localhost:5001/tournament/'+this.props.match.params.id,newQuaterFinals)
+//       .then(res => {
+//         console.log(res);
+//         console.log(res.data);
         
         
         
-      })
-      .catch(function(error){
+//       })
+//       .catch(function(error){
 
-console.log(error);
-      })
+// console.log(error);
+//       })
       
         
         
-    }
+//     }
 
  
 render() {
  
-    var {tournament} =this.state;
+    var { tournament} =this.state;
+    console.log({tournament});
   
   return (
 
@@ -96,17 +113,17 @@ render() {
 
 <div class="dividecolumn">
 <div class="container">
-  
-  <h2></h2>
+ 
+ 
   <div class="tournament-bracket tournament-bracket--rounded">                                                     
-    <div class="tournament-bracket__round tournament-bracket__round--Semifinals">
-      <h3 class="tournament-bracket__round-title">Semifinals</h3>
+    <div class="tournament-bracket__round tournament-bracket__round--quarterfinals">
+      <h3 class="tournament-bracket__round-title">Quarterfinals</h3>
       <ul class="tournament-bracket__list">
         <li class="tournament-bracket__item">
           <div class="tournament-bracket__match" tabindex="0">
             <table class="tournament-bracket__table">
               <caption class="tournament-bracket__caption">
-                
+               
               </caption>
                
               <tbody class="tournament-bracket__content">
@@ -121,7 +138,7 @@ render() {
                 </tr>
                 <tr class="tournament-bracket__team">
                   <td class="tournament-bracket__country">
-                    <abbr class="tournament-bracket__code" >{tournament.quaterfinal_winner2}</abbr>
+                    <abbr class="tournament-bracket__code" >{tournament.quaterfinal_winner1}</abbr>
                     
                   </td>
                   <td class="tournament-bracket__score">
@@ -143,7 +160,7 @@ render() {
               <tbody class="tournament-bracket__content">
                 <tr class="tournament-bracket__team tournament-bracket__team--winner">
                   <td class="tournament-bracket__country">
-                    <abbr class="tournament-bracket__code">{tournament.quaterfinal_winner3}</abbr>
+                    <abbr class="tournament-bracket__code">{tournament.quaterfinal_winner1}</abbr>
                     
                   </td>
                   <td class="tournament-bracket__score">
@@ -152,7 +169,7 @@ render() {
                 </tr>
                 <tr class="tournament-bracket__team">
                   <td class="tournament-bracket__country">
-                    <abbr class="tournament-bracket__code" >{tournament.quaterfinal_winner4}</abbr>
+                    <abbr class="tournament-bracket__code" >{tournament.quaterfinal_winner1}</abbr>
                    
                   </td>
                   <td class="tournament-bracket__score">
@@ -164,11 +181,10 @@ render() {
           </div>
         </li>
         
-        
       </ul>
-      <Link to={"/tournament/"+tournament._id+"/finals"}>
+      <Link to={"/tournament/"+tournament._id+"/semifinals"}>
         
-    <button>GO TO FINALS </button>
+    <button>GO TO SEMI FINALS </button>
    </Link>
     </div>
    
@@ -193,8 +209,8 @@ render() {
           </div>
           
           
-        <div class="input_field select_option"  value={this.state.semifinal_winner1}
-                                onChange={this.onChangesemifinal_winner1}>
+        <div class="input_field select_option"  value={this.state.quaterfinal_winner1}
+                                onChange={this.onChangequaterfinal_winner1}>
                 <select>
                   <option>SELECT WINNER</option>
                   <option>{tournament.bracket_player1}</option>
@@ -210,8 +226,8 @@ render() {
           </div>
           
           
-        <div class="input_field select_option"  value={this.state.semifinal_winner2}
-                                onChange={this.onChangesemifinal_winner2}>
+        <div class="input_field select_option"  value={this.state.quaterfinal_winner2}
+                                onChange={this.onChangequaterfinal_winner2}>
                 <select>
                   <option>SELECT WINNER</option>
                   <option>{tournament.bracket_player3}</option>
@@ -220,13 +236,41 @@ render() {
               
               </div>
            
-         
+          <div class="input_field"> 
+          <input type="text" name="email"  placeholder="PLAYER 5"  value={tournament.bracket_player5} required />
+          </div>
+         <div class="input_field"> 
+         <input type="text" name="email" placeholder="PLAYER 6"  value={tournament.bracket_player6}required />
+          </div>
           
           
-      
+        <div class="input_field select_option"  value={this.state.quaterfinal_winner3}
+                                onChange={this.onChangequaterfinal_winner3}>
+                <select>
+                  <option>SELECT WINNER</option>
+                  <option>{tournament.bracket_player5}</option>
+                  <option>{tournament.bracket_player6}</option>
+                </select>
+              
+              </div>
+           <div class="input_field"> 
+           <input type="text" name="email" placeholder="PLAYER 7"    value={tournament.bracket_player7}required />
+          </div>
+         <div class="input_field"> 
+         <input type="text" name="email" placeholder="PLAYER 8"   value={tournament.bracket_player8}required />
+          </div>
+          
+          
+        <div class="input_field select_option"  value={this.state.quaterfinal_winner4}
+                                onChange={this.onChangequaterfinal_winner4}>
+                <select>
+                  <option>SELECT WINNER</option>
+                  <option>{tournament.bracket_player7}</option>
+                  <option>{tournament.bracket_player8}</option>
+                </select>
+              
+              </div>
            
-          
-       
            
           <input class="button" type="submit" value="PUBLISH" />
         </form>

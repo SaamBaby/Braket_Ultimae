@@ -1,6 +1,6 @@
 const Tournament = require('../../models/Tournament');
 const Quaterfinal = require('../../models/quaterfinal');
-
+const Semifinal = require('../../models/semifinal');
 // Tournament CRUD
 // Creating
 // Create a new Tournament
@@ -18,7 +18,7 @@ exports.findAllTournamets= async (req, res) => {
   const tournaments = await Tournament.find();
   res.json(tournaments);
   // res.render('/tournaments', { tournaments });
-   console.log(tournaments);
+ //  console.log(tournaments);
 
  
  
@@ -45,12 +45,11 @@ exports.selectquaterfinal = async (req, res) => {
 
 // find winners by  id
 
-exports.findquaterfinalById = async (req, res) => {
+exports.loadsemifinalById = async (req, res) => {
   const id = req.params.id;
-  const tournament = await  Quaterfinal.findById(id);
- // console.log(tournament);
- 
- res.json(tournament);
+  const quaterfinal = await   Quaterfinal.findById(id);
+ console.log(quaterfinal);
+ res.json(quaterfinal);
   
 };
 

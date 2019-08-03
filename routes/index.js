@@ -16,8 +16,11 @@ var tournaments = require('./controllers/Tournament');
 // Handle create form (POST)
 router.post('/tournament/create', tournaments.createNewTournament);
 
+// get Load semifinal winner  
+
+router.get('/tournament/quaterfinal/:id', tournaments.loadsemifinalById);
 // Handle select form (POST)
-router.post('/tournament/quaterfinal', tournaments.selectquaterfinal);
+router.post('/tournament/quaterfinal/', tournaments.selectquaterfinal);
 
 // List all tournaments'(GET)
 router.get('/tournaments', tournaments.findAllTournamets);

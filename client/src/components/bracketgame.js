@@ -49,7 +49,7 @@ onChangequaterfinal_winner4(e) {
   });
 }
 
-//fetch('http://localhost:5001/tournament/'+this.props.match.params.id)
+
 componentDidMount() {
   fetch('http://localhost:5001/tournament/'+this.props.match.params.id)
       .then(res => res.json())
@@ -80,7 +80,7 @@ componentDidMount() {
 
        
     };
-         axios.post('http://localhost:5001/tournament/'+this.props.match.params.id,newQuaterFinals)
+         axios.post('http://localhost:5001/tournament/quaterfinal/'+this.props.match.params.id,newQuaterFinals)
       .then(res => {
         console.log(res);
         console.log(res.data);
@@ -239,7 +239,7 @@ render() {
           </div>
         </li>
       </ul>
-      <Link to={"/tournament/"+tournament._id+"/semifinals"}>
+      <Link to={"/tournament/semifinals/"+tournament._id}>
         
     <button>GO TO SEMI FINALS </button>
    </Link>
