@@ -24,12 +24,22 @@ router.post('/tournament/quaterfinal/', tournaments.selectquaterfinal);
 
 // List all tournaments'(GET)
 router.get('/tournaments', tournaments.findAllTournamets);
+// List all quater final winners
+router.get('/quaterfinal', tournaments.findAllquaterfinallWinners);
+
 
 // // List a specific tournaments' (GET)
 
 router.get('/tournament/:id', tournaments.findTournametById);
 
-// find all quater final winners
+// select semi final winner
+router.post('/tournament/semifinal/', tournaments.selectsemifinal);
+// loading final 
+
+router.get('/tournament/semifinal/:id', tournaments.loadfinalById);
+// select final winner
+
+router.post('/tournament/final/', tournaments.selectfinal);
 
 // // Require auth on every route below this router
 // router.use(requireAuth);

@@ -16,6 +16,11 @@ const classSchema = new Schema({
   bracket_player6:String,
   bracket_player9:String,
   bracket_player8:String,
+  quaterfinal_winner1 :String,
+     quaterfinal_winner2 :  String,
+     quaterfinal_winner3 :  String,
+     quaterfinal_winner4 :  String,
+ 
  
 
 
@@ -76,6 +81,23 @@ const TournamentSchema = new Schema({
     
   },
   bracket_player8: {
+    type:String,
+    
+  },
+  quaterfinal_winner1: {
+    type:String,
+    
+  },
+  
+  quaterfinal_winner2: {
+    type:String,
+    
+  },
+  quaterfinal_winner3: {
+    type:String,
+    
+  },
+  quaterfinal_winner4: {
     type:String,
     
   },

@@ -5,7 +5,7 @@ const classSchema = new Schema({
  
      semifinal_winner1 :String,
      semifinal_winner2 :  String,
-    
+     tournament_id :  String,
  
   
  
@@ -28,6 +28,10 @@ const SemifinalSchema = new Schema({
     
   },
   
+  tournament_id :   {
+    type:String,
+  },
+ 
  
   class: classSchema
 });

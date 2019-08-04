@@ -18,10 +18,12 @@ export default class TournmentDetails extends Component {
       this.onSubmit = this.onSubmit.bind(this);
       this.state = {
         tournament:[],
+        quaterfinal:[],
        quaterfinal_winner1: '',
        quaterfinal_winner2: '',
        quaterfinal_winner3: '',
-       quaterfinal_winner4: ''
+       quaterfinal_winner4: '',
+       tournament_id: ''
        }
   }
 
@@ -76,11 +78,12 @@ componentDidMount() {
      quaterfinal_winner2 :  this.state.quaterfinal_winner2,
      quaterfinal_winner3 :  this.state.quaterfinal_winner3,
      quaterfinal_winner4 :  this.state.quaterfinal_winner4,
+     tournament_id:this.props.match.params.id
        
 
        
     };
-         axios.post('http://localhost:5001/tournament/quaterfinal/'+this.props.match.params.id,newQuaterFinals)
+         axios.post('http://localhost:5001/tournament/quaterfinal/',newQuaterFinals)
       .then(res => {
         console.log(res);
         console.log(res.data);
@@ -92,9 +95,7 @@ componentDidMount() {
 
 console.log(error);
       })
-      
-        
-        
+    
     }
 
  

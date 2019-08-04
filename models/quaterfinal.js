@@ -7,6 +7,7 @@ const classSchema = new Schema({
      quaterfinal_winner2 :  String,
      quaterfinal_winner3 :  String,
      quaterfinal_winner4 :  String,
+     tournament_id :  String,
  
   
  
@@ -36,6 +37,11 @@ const quaterfinalSchema = new Schema({
     type:String,
     
   },
+  tournament_id : {
+    type:String,
+    
+  },
+ 
  
   class: classSchema
 });

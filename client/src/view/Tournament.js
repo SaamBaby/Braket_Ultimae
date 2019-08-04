@@ -33,7 +33,7 @@ export default class TournmentList extends Component {
  
 render() {
   var {tournaments} =this.state;
-  
+  console.log({tournaments})
   return (
     <div>
     <div className="hero">

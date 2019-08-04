@@ -12,11 +12,11 @@ import Navbar from './components/Navbar';
 import Details from './components/bracketgame';
 import Semifinals from './components/semifinals';
 import Footer from './components/footer';
-// import Details from './components/bracket_details';
+
 import Login from './components/Login';
 import Register from './components/Register'
-import { rootCertificates } from 'tls';
-//import Details from './components/QuaterFinal';
+
+import Finals from './components/finals';
 
 
 
@@ -34,11 +34,12 @@ function App() {
    <Route exact  path="/tournament/:id" component={Details}/>
    <Route exact  path="/create-tournament" component={Create}/>
    <Route exact  path="/tournament/semifinals/:id" component={ Semifinals }/>
+   <Route exact  path="/tournament/finals/:id" component={Finals}/>
    
    <Route exact  path="/login" component={Login}/>
    <Route exact  path="/register" component={Register}/>
    </Switch>
-<footer></footer>
+<Footer></Footer>
    </>
 
   );

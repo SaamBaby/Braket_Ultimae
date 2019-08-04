@@ -56,7 +56,7 @@ render() {
     
   <li className ="nobull" key ={item.id}> 
       
-  <figure class="snip1360">
+  <figure className="snip1360">
   <img src={item.bracket_img} alt="error" />
   <figcaption>
     <h2>{item.bracket_name} </h2>
