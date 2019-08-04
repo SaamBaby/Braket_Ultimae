@@ -90,7 +90,7 @@ exports.selectfinal = async (req, res) => {
   const body = req.body;
   const final = await new  Final  (body).save();
   
-    console.log(final)
+    console.log(final);
     
   
   
