@@ -2,12 +2,12 @@ const express= require('express')
 const router= express.Router(); // creates a router
 var tournaments = require('./controllers/Tournament');
 
-// const requireAuth = (req, res, next) => {
-//   if (req.isAuthenticated()) return next();
+const requireAuth = (req, res, next) => {
+  if (req.isAuthenticated()) return next();
 
-//   return res.redirect('/login');
-// };
-// router.post('*', requireAuth); // Protect ALL POST routes
+  return res.redirect('/login');
+};
+router.post('*', requireAuth); // Protect ALL POST routes
 
 
 

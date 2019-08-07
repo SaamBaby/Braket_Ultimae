@@ -7,14 +7,65 @@ import axios from 'axios';
  export default class NameForm extends Component {
     constructor(props) {
       super(props);
-      this.handleSubmit = this.handleSubmit.bind(this);
+      this.onChangeusername = this.onChangeusername.bind(this);
+      this.onChangepassword = this.onChangepassword.bind(this);
+      
+      this.onSubmit = this.onSubmit.bind(this);
+      this.state = {
+        username: '',
+        password: '',}
     }
   
-    handleSubmit(e) {
-      alert('The value is: ' + this.input.value);
+    onChangeusername(e) {
+      this.setState({
+         username: e.target.value
+      });
+  }
+
+  onChangepassword(e) {
+      this.setState({
+         password: e.target.value
+      });
+  }
+  
+
+// submitt button
+
+    onSubmit(e) {
       e.preventDefault();
-    }
+      
+      console.log(`Form submitted:`);
+     
+     
+      const user = {
+       username : this.state.username,
+       password :  this.state.password,
+     
+         
   
+         
+      };
+           axios.post('http://localhost:5001/login',user)
+        .then(res => {
+          console.log(res);
+          console.log(res.data);
+          
+          
+          
+        })
+        .catch(function(error){
+  
+  console.log(error);
+        })
+      
+
+        this.setState({
+            
+       username: '',
+        password: '',
+
+      })
+   }
     render() {
       return (
 
@@ -25,15 +76,19 @@ import axios from 'axios';
         <div className="pop">
            <div className ="pic-and-form">
               <div className ="form-style-9 in-line">
-              <form onSubmit={this.handleSubmit} className ="">
+              <form onSubmit={this.onSubmit} className ="">
                  <div className="form-group-9"  >
                     <label>
-                    <input type="text" placeholder="Name" className="form-input-9" ref={(input) => this.input = input} />
+                    <input type="text" placeholder="Name" className="form-input-9" value={this.state.username}
+                    onChange={this.onChangeusername} ref={(input) => this.input = input} />
                     </label>
                  </div>
-                 <div className="form-group-9"  >
+ 
+
+               <div className="form-group-9"  >
                     <label>
-                    <input type="password" placeholder="Password" className="form-input-9" ref={(input) => this.input = input} />
+                    <input type="password" placeholder="Password" className="form-input-9"  value={this.state.password}
+                    onChange={this.onChangepassword}  ref={(input) => this.input = input} />
                     </label>
                  </div>
                  

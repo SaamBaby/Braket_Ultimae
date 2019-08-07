@@ -17,6 +17,7 @@ componentDidMount() {
         .then(json => {this.setState({
           tournaments:json,
           
+          
       
         })})
       
@@ -26,8 +27,15 @@ componentDidMount() {
 
         
 }
+
+
+
 render() {
-  var {tournaments} =this.state;
+  
+
+  
+var {tournaments}= this.state;
+  
   return (
     
     <div className="snip1376 ">
@@ -51,11 +59,13 @@ render() {
       <div className="Head">
    <h2>ACTIVE TOURNMENTS </h2>
   </div> 
+ 
   <div class="grid-container"> 
 {tournaments.map(item => (
     
   <li className ="nobull" key ={item.id}> 
       
+      { item.IsActive === true ?
   <figure className="snip1360">
   <img src={item.bracket_img} alt="error" />
   <figcaption>
@@ -66,11 +76,15 @@ render() {
     <a href={"/tournament/"+item._id} class="read-more">Go to Bracket</a>
   </figcaption>
 </figure>
+  
+  : null }
 
 </li>
 ))}
 </div>
 
+  
+ 
   
      </div>
 
