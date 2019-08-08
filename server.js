@@ -63,6 +63,12 @@ app.use('/', require('./routes/index'));
 
 // setting env for ports 
 const port = process.env.PORT || 5001;
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static( 'client/build' ));
 
+  app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, 'client', 'build', 'index.html')); // relative path
+  });
+}
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
