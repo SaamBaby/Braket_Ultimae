@@ -12,7 +12,7 @@ export default class Home extends Component {
 }
 
 componentDidMount() {
-    fetch('http://localhost:5001/tournaments'||process.env.baseURL+"/tournaments")
+    fetch('https://fast-hamlet-62898.herokuapp.com/tournaments')
         .then(res => res.json())
         .then(json => {this.setState({
           tournaments:json,
