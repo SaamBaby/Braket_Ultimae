@@ -12,7 +12,7 @@ export default class Home extends Component {
 }
 
 componentDidMount() {
-    fetch('http://localhost:5001/tournaments')
+    fetch('http://localhost:5001/tournaments'||process.env.baseURL+"/tournaments")
         .then(res => res.json())
         .then(json => {this.setState({
           tournaments:json,
