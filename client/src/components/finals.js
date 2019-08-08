@@ -36,7 +36,7 @@ export default class finals extends Component {
 
 
 componentDidMount() {
-  fetch('http://localhost:5001/tournament/semifinal/'+this.props.match.params.id)
+  fetch('https://fast-hamlet-62898.herokuapp.com/tournament/semifinal/'+this.props.match.params.id)
   .then(res => res.json())
   .then(json => {this.setState({
     tournament:json,
@@ -66,7 +66,7 @@ componentDidMount() {
 
        
     };
-         axios.post('http://localhost:5001/tournament/final/',newsemiFinals)
+         axios.post('https://fast-hamlet-62898.herokuapp.com/tournament/final/',newsemiFinals)
       .then(res => {
         console.log(res);
         console.log(res.data);

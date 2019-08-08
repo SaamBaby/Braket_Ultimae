@@ -15,7 +15,7 @@ export default class TournmentList extends Component {
   }
 
   componentDidMount() {
-      fetch('http://localhost:5001/tournaments')
+      fetch('https://fast-hamlet-62898.herokuapp.com/tournaments')
           .then(res => res.json())
           .then(json => {this.setState({
             tournaments:json,
