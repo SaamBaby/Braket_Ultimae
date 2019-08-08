@@ -72,7 +72,7 @@ render() {
     <p>{item.bracket_desc} </p>
     
    
-    <a href={"/tournament/"+item._id} className="read-more">Go to Bracket</a>
+    <a href={"/tournaments/"+item._id} className="read-more">Go to Bracket</a>
   </figcaption>
 </figure>
 
