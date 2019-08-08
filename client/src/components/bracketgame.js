@@ -53,7 +53,7 @@ onChangequaterfinal_winner4(e) {
 
 
 componentDidMount() {
-  fetch('https://fast-hamlet-62898.herokuapp.com/tournament/'+this.props.match.params.id)
+  fetch('https://brakets.herokuapp.com/tournament/'+this.props.match.params.id)
       .then(res => res.json())
       .then(json => {this.setState({
        tournament:json,
@@ -83,7 +83,7 @@ componentDidMount() {
 
        
     };
-         axios.post('https://fast-hamlet-62898.herokuapp.com/tournament/quaterfinal/',newQuaterFinals)
+         axios.post('https://brakets.herokuapp.com/tournament/quaterfinal/',newQuaterFinals)
       .then(res => {
         console.log(res);
         console.log(res.data);

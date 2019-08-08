@@ -53,7 +53,7 @@ import axios from 'axios';
   
          
       };
-           axios.post('https://fast-hamlet-62898.herokuapp.com/register',user)
+           axios.post('https://brakets.herokuapp.com/register',user)
         .then(res => {
           console.log(res);
           console.log(res.data);

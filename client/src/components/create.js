@@ -150,7 +150,7 @@ export default class create extends Component {
         };
    
         
-            axios.post('https://fast-hamlet-62898.herokuapp.com/tournament/create',newTournament)
+            axios.post('https://brakets.herokuapp.com/tournament/create',newTournament)
       .then(res => {
         console.log(res);
         console.log(res.data);
